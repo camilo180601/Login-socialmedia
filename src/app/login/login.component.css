@@ -1,0 +1,8 @@
+.text {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.text-gold {
+    color: rgba(198, 171, 17, 0.864);
+}
