@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-    public user: User;
-    public state: string = '';
+    public user: User
+    public state: string = ''
+    public userLogged: string = ''
 
     constructor(
         private _route: Router
@@ -32,6 +33,7 @@ export class LoginComponent {
             const { status, token, user } = data
             localStorage.setItem('tokenAuth', token)
             localStorage.setItem('userLogged', JSON.stringify(user))
+            this.userLogged = JSON.stringify(user)
             this.state = status
         })
 
